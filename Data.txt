@@ -1,0 +1,120 @@
+ heartData = [
+  
+    Name: "Height and weight - BMI",
+    Link: 
+  ,
+
+  
+    Name: "Area and volume – S/V ratio",
+    Link: 
+  ,
+  
+    Name: "CV System",
+    Link: 
+  ,
+  
+    Name: "Heart rate, blood pressure, O2 saturation",
+    Link: 
+  ,
+  
+    Name: "Blood volume – composition, Hct, [Hb]",
+    Link: 
+  ,
+  
+    Name: "Cardiac output, TPR, SV",
+    Link: 
+  ,
+  
+    Name: "Compliance",
+    Link: 
+  ,
+  
+    Name: "Cardiac Index",
+    Link: 
+  ,
+  
+    Name: "Blood pH",
+    Link: 
+  ,
+  
+    Name: "Respiratory System",
+    Link: 
+  ,
+  
+    Name: "RR, TV, ventilation",
+    Link: 
+  ,
+  
+    Name: "Compliance, FEV1",
+    Link: 
+  ,
+  
+    Name: "O2 consumed, CO2 produced (pH)",
+    Link: 
+  ,
+];
+
+lungsData = [
+   Name: "BMR", 
+   Link: 
+   Name: "Blood glucose, lipid profile",
+    Link: 
+   Name: "Work (mets)", 
+   Link: 
+   Name: "Body temp.",
+    Link: 
+   Name: "Urinary System", 
+   Link: 
+   Name: "RBF, GFR, urine output", 
+   Link: 
+   Name: "Fluid balance, ion levels", 
+   Link: 
+   Name: "GI System", 
+   Link: 
+   Name: "Input/output", 
+   Link: 
+   Name: "Caloric balance, mass balance, fluid balance", 
+   Link: 
+   Name: "Vitamins",
+    Link: 
+   Name: "Integumentary System", 
+   Link: 
+   Name: "Sweat rate, T, fluid balance", 
+   Link: 
+   Name: "Nervous System", 
+   Link: 
+   Name: "IQ", 
+   Link: 
+];
+
+stomachData = [
+   Name: "Height/weight", 
+   Link: 
+   Name: "BMR", 
+   Link: 
+   Name: "Blood pressure",
+    Link: 
+   Name: "Fluid balance", 
+   Link: 
+   Name: "Skeletal System", 
+   Link: 
+   Name: "Number of bones", 
+   Link: 
+   Name: "Bone strength and density", 
+   Link: 
+   Name: "Joint ROM, speed", 
+   Link: 
+];
+
+headData = [
+   Name: "IOP", 
+   Link: 
+   Name: "Aural sensitivity",
+    Link: 
+   Name: "Scovill scale",
+    Link: 
+   Name: "Pain scales",
+    Link: 
+   Name: "Memory", 
+   Link: 
+];

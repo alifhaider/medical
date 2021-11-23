@@ -1,0 +1,380 @@
+:root {
+  --mainWhite: white;
+  --mainGreen: #55b74e;
+  --pseudo: hidden;
+  --shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.con {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  height: 700px;
+}
+
+a {
+  color: var(--mainWhite);
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  background-image: url("images/Body-Scan.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  visibility: var(--pseudo);
+}
+
+.invisible {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.invisible:hover {
+  opacity: 1;
+}
+
+.head {
+  background-image: url("images/Head.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  border-radius: 10px;
+  top: 9%;
+  left: 49.5%;
+  height: 11%;
+  width: 5%;
+  scale: 1;
+  transition: all 0.7s ease;
+}
+
+.leftArm {
+  position: absolute;
+  top: 22%;
+  left: 42%;
+  height: 32%;
+  width: 5%;
+}
+
+.rightArm {
+  position: absolute;
+  top: 22%;
+  left: 57%;
+  height: 32%;
+  width: 5%;
+}
+
+.body {
+  position: absolute;
+  top: 20%;
+  left: 47.5%;
+  border-radius: 10px;
+  height: 30%;
+  width: 9.1%;
+  display: flex;
+  scale: 1;
+  opacity: 0;
+  transition: all 0.4s ease;
+  flex-direction: column;
+}
+
+.bodyContainer {
+  display: flex;
+  height: 50%;
+  width: 100%;
+}
+
+.stomach {
+  opacity: 0 !important;
+  border-radius: 10px;
+  background-image: url("images/stomach.jpg");
+  opacity: 0.7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  height: 50%;
+  width: 100%;
+}
+
+.heart {
+  opacity: 0 !important;
+  border-radius: 10px;
+  background-image: url("images/Heart.jpg");
+  opacity: 0.7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.lungs {
+  opacity: 0 !important;
+  border-radius: 10px;
+  background-image: url("images/Lung.jpg");
+  opacity: 0.7;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10px;
+  height: 100%;
+  width: 50%;
+}
+
+.leftFoot {
+  position: absolute;
+  top: 50%;
+  left: 47%;
+  height: 43%;
+  width: 5%;
+}
+
+.rightFoot {
+  position: absolute;
+  top: 50%;
+  left: 52%;
+  height: 43%;
+  width: 5%;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--mainWhite);
+  position: relative;
+  border-radius: 10px;
+  height: 150px;
+  width: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.buttonContainer::after {
+  content: "";
+  border-radius: 10px;
+  background: var(--mainWhite);
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: slider 0.3s linear forwards;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+.buttonDiv {
+  position: absolute;
+  top: 0;
+  padding: 0px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttonDiv a {
+  height: 25px;
+  min-width: 115px;
+  color: var(--mainGreen);
+  padding: 2px 8px;
+  transition: all 0.2s ease;
+}
+
+.buttonDiv a:hover {
+  height: 100%;
+  color: var(--mainWhite);
+  background: var(--mainGreen);
+}
+
+a.Link {
+  font-size: 12px;
+  transition: all 0.3s ease-in-out;
+  padding: 2px 8px;
+  border: 1px solid var(--mainGreen);
+  position: relative;
+  overflow: hidden;
+}
+
+a.Link:hover::after {
+  content: "";
+  background: var(--mainWhite);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  animation: sslider 0.5s ease forwards;
+  z-index: 1;
+}
+
+@keyframes sslider {
+  0% {
+    left: 100%;
+    width: 0;
+  }
+  50% {
+    left: 0;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 0;
+  }
+}
+
+.head:hover {
+  visibility: visible;
+  scale: 1.3;
+  box-shadow: var(--shadow);
+}
+
+.rightArm:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.heart:hover {
+  opacity: 1 !important;
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.lungs:hover {
+  opacity: 1 !important;
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.stomach:hover {
+  opacity: 1 !important;
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.buttonDiv a:hover {
+  font-size: 14px;
+}
+
+.leftFoot:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.leftArm:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.rightFoot:hover {
+  scale: 1.1;
+  box-shadow: var(--shadow);
+}
+
+.vh {
+  visibility: hidden;
+}
+
+.buttonContainer::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.buttonContainer::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 15px;
+  background-color: #f5f5f5;
+}
+
+.buttonContainer::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(
+    top,
+    #eafae9 0%,
+    #cdf7ca 50%,
+    #a1f79b 51%,
+    #55b74e 100%
+  );
+}
+
+.button {
+  position: absolute;
+  top: 75%;
+  display: flex;
+  flex-direction: column;
+  left: 60%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  padding: 12px 20px;
+  background: var(--mainGreen);
+  color: var(--mainWhite);
+  margin-bottom: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid var(--mainGreen);
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--mainWhite);
+  color: var(--mainGreen);
+  border: 2px solid var(--mainGreen);
+}
+
+button:hover::after {
+  content: "";
+  background: var(--mainWhite);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  border-radius: 10px;
+  animation: sslider 0.5s ease forwards;
+  z-index: 1;
+}
+
+button:active {
+  background-color: var(--mainWhite);
+  color: var(--mainGreen);
+  border: 2px solid var(--mainGreen);
+}
